@@ -32,7 +32,7 @@ To find factorial of 5 using non-tail recursion<br>
 **5 * 24**<br>
 **120**<br>
 
-Non-Tail recursive functions have to finish the pending work after the recursive call finishes, so activation record for each recursive call has to be maintained in the stack. Here, after the recursive call, we still need to remember to multiply later on in order to get the desired results and to remember, space is required in order to store the activation record in the stack for each recursive call which will degrade performance and will not be space efficient.
+Non-Tail recursive functions have to finish the pending work after the recursive call finishes, so activation record for each recursive call has to be maintained in the stack. Here, after the recursive call, we still need to remember to multiply later on, in order to get the desired results, and to remember, space is required in order to store the activation record in the stack for each recursive call which will degrade performance and will not be space efficient.
 
 
 𝗧𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻<br>
@@ -58,7 +58,6 @@ To find factorial of 5 using tail recursion<br>
 **120**<br>
 
 In tail recursive function, no pending operations are left after making a recursive call. So, no need to store the record of the previous state i.e. no need to push a new activation record for each recursive call in the stack. Here, we are performaing running multiplication using the auxiliary variable(res) on the fly as we move along instead of waiting till the end and doing multiplication backwards. So, nothing to remember and therefore no need to store activiation record for each recursive call which results in faster performance and will be space efficient as well.
-
 
 **Tail recursion is a compile level optimisation**. Some modern compiler can detect tail recursion and perform the optimisation by converting it to iteration to improve performance.
 
@@ -95,9 +94,9 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
 Here, I tried to throw an exception in a tail recursive function and **we can see all the recursive calls in the stack trace** and it can clearly be seen that Java doesn't support tail recursion and **according to Brian Goetz(Java Language Architect @ Oracle) there are number of security sensitive methods in JDK which rely on counting stack frames between JDK library code and calling code to figue out who's calling them.**
 
 **Reference:**
-Data Structures through C in Depth by S.K.Srivastava/Deepali Srivastava
-https://stackoverflow.com/questions/33923/what-is-tail-recursion
-https://softwareengineering.stackexchange.com/questions/272061/why-doesnt-java-have-optimization-for-tail-recursion-at-all
+Data Structures through C in Depth by S.K.Srivastava/Deepali Srivastava<br>
+https://stackoverflow.com/questions/33923/what-is-tail-recursion<br>
+https://softwareengineering.stackexchange.com/questions/272061/why-doesnt-java-have-optimization-for-tail-recursion-at-all<br>
 
 
 ## Programs
