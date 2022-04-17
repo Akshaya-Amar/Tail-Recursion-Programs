@@ -62,6 +62,36 @@ This can be improved by making recursive program as tail recursive 𝗮𝘀 𝗶
 
 **Java, python don't support tail recursion while C and C++ do.**
 
+Let's try in Java program whether it's supported or not.
+
+```
+class Sample {
+  public static void main(String[] args) {
+    System.out.println(new Sample().fact(5, 1));
+  }
+
+  private int fact(int num, int res) {
+    if(num == 1) {
+      System.out.println(10 / 0);
+      return res;
+    }
+
+    return fact(num - 1, res * num);
+  }
+}
+```
+```
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at Sample.fact(Sample.java:8)
+	at Sample.fact(Sample.java:12)
+	at Sample.fact(Sample.java:12)
+	at Sample.fact(Sample.java:12)
+	at Sample.fact(Sample.java:12)
+	at Sample.main(Sample.java:3)
+```
+
+I tried to throw an exception in a tail recursive function and **we can see all the recursive calls in the stack trace** and it can clearly be seen that Java doesn't support tail recursion and **according to Brian Goetz(Java Language Architect @ Oracle) there are number of security sensitive methods in JDK which rely on counting stack frames between JDK library code and calling code to figue out who's calling them.**
+
 **Reference:**
 Data Structures through C in Depth by S.K.Srivastava/Deepali Srivastava
 
