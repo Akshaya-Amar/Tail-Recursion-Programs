@@ -49,6 +49,8 @@ return fact(num - 1, num * res);  // tail recursive call
 }
 ```
 
+**A recursive function can be converted into a tail recursive function using an auxiliary parameter**(like we have used (res) in our case). The result is accumulated in this parameter and this is done in such a way that there is no pending operation left after the recursive call.
+
 To find factorial of 5 using tail recursion<br>
 **fact(5, 1)**<br>
 **fact(4, 5)**<br>
@@ -57,7 +59,7 @@ To find factorial of 5 using tail recursion<br>
 **fact(1, 120)**<br>
 **120**<br>
 
-In tail recursive function, no pending operations are left after making a recursive call. So, no need to store the record of the previous state i.e. no need to push a new activation record for each recursive call in the stack. Here, we are performaing running multiplication using the auxiliary variable(res) on the fly as we move along instead of waiting till the end and doing multiplication backwards. So, nothing to remember and therefore no need to store activiation record for each recursive call which results in faster performance and will be space efficient as well.
+In tail recursive function, since no pending operations are left after making a recursive call so, no need to store the record of the previous state i.e. no need to push a new activation record for each recursive call in the stack. Here, we are performaing running multiplication using the auxiliary variable(res) on the fly as we move along instead of waiting till the end and doing multiplication backwards. So, nothing to remember and therefore no need to store activiation record for each recursive call which results in faster performance and will be space efficient as well.
 
 **Tail recursion is a compile level optimisation**. Some modern compiler can detect tail recursion and perform the optimisation by converting it to iteration to improve performance.
 
