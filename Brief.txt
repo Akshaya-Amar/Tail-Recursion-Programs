@@ -1,0 +1,202 @@
+𝗡𝗼𝗻-𝘁𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 𝘁𝗼 𝗧𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻
+
+Slower execution to faster execution
+
+O(n) space to O(1) space
+
+
+
+𝗧𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻
+
+A recursive call is said to be tail recursive if it is the last statement to be executed inside a function and that call is not a part of expression.
+
+eg:
+
+int fact(int num, int res){
+
+if(num == 1){
+
+return res;
+
+}
+
+return fact(num - 1, num * res);  // tail recursive call
+
+}
+
+
+
+In tail recursive function, no pending operations are left after making  a recursive call. So, no need to store the record of the previous state i.e. no need to push a new Activation Record for each recursive call in the stack.
+
+
+
+𝗡𝗼𝗻-𝘁𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 
+
+int fact(int num) {
+
+if(num == 1) {
+
+return 1;
+
+}
+
+return num * fact(num - 1); // not a tail recursive call
+
+}
+
+
+
+Non-Tail recursive functions have to finish the pending work after the recursive call finishes, so Activation Record for each recursive call has to be maintained in the stack.
+
+
+
+𝗥𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 𝗶𝘀 𝘀𝗹𝗼𝘄 because of the 𝘁𝗶𝗺𝗲 𝘀𝗽𝗲𝗻𝘁 𝗶𝗻 𝗽𝘂𝘀𝗵𝗶𝗻𝗴 𝗮𝗻𝗱 𝗽𝗼𝗽𝗽𝗶𝗻𝗴 𝘁𝗵𝗲 𝗔𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗥𝗲𝗰𝗼𝗿𝗱𝘀 on and from the stack for each recursive call and 𝗲𝘅𝗽𝗲𝗻𝘀𝗶𝘃𝗲 𝗶𝗻 𝘁𝗲𝗿𝗺𝘀 𝗼𝗳 𝗺𝗲𝗺𝗼𝗿𝘆 as well because 𝗶𝘁 𝗿𝗲𝗾𝘂𝗶𝗿𝗲𝘀 𝘀𝗽𝗮𝗰𝗲 𝗶𝗻 𝘁𝗵𝗲 𝘀𝘁𝗮𝗰𝗸 𝘁𝗼 𝘀𝘁𝗼𝗿𝗲 𝘁𝗵𝗲 𝗔𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗥𝗲𝗰𝗼𝗿𝗱𝘀 for each recursive call and 𝗶𝗳 𝘁𝗵𝗲 𝘀𝘁𝗮𝗰𝗸 𝗶𝘀 𝘁𝗼𝗼 𝗱𝗲𝗲𝗽, 𝘁𝗵𝗲𝗻 𝘀𝘁𝗮𝗰𝗸 𝗺𝗮𝘆 𝗼𝘃𝗲𝗿𝗳𝗹𝗼𝘄 𝘁𝗼𝗼. 
+
+
+
+All these things can be 𝗶𝗺𝗽𝗿𝗼𝘃𝗲𝗱 𝗯𝘆 𝗺𝗮𝗸𝗶𝗻𝗴 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝘃𝗲 𝗽𝗿𝗼𝗴𝗿𝗮𝗺 𝘁𝗼 𝘁𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝘃𝗲 𝗮𝘀 𝗶𝘁 𝗱𝗼𝗲𝘀𝗻'𝘁 𝗶𝗻𝘃𝗼𝗹𝘃𝗲𝘀 𝘁𝗵𝗲 𝗽𝘂𝘀𝗵𝗶𝗻𝗴 𝗮𝗻𝗱 𝗽𝗼𝗽𝗽𝗶𝗻𝗴 𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀, 𝗿𝗮𝘁𝗵𝗲𝗿 𝘁𝗵𝗲 𝗽𝗿𝗲𝘃𝗶𝗼𝘂𝘀 𝗔𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗥𝗲𝗰𝗼𝗿𝗱 𝗴𝗲𝘁𝘀 𝗼𝘃𝗲𝗿𝘄𝗿𝗶𝘁𝘁𝗲𝗻 𝗯𝘆 𝘁𝗵𝗲 𝗰𝘂𝗿𝗿𝗲𝗻𝘁 𝗔𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗥𝗲𝗰𝗼𝗿𝗱 when a recursive call occurs, while retaining the original return address. So, at a time we have only one Activation Record on the stack and that too for the currently executing recursive call. 𝗦𝗼, 𝗶𝘁 𝗱𝗼𝗲𝘀𝗻'𝘁 𝗺𝗮𝘁𝘁𝗲𝗿 𝘁𝗵𝗮𝘁 𝗵𝗼𝘄 𝗱𝗲𝗲𝗽 𝘁𝗵𝗲 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 𝗶𝘀, 𝘁𝗵𝗲 𝘀𝗽𝗮𝗰𝗲 𝗿𝗲𝗾𝘂𝗶𝗿𝗲𝗺𝗲𝗻𝘁 𝘄𝗶𝗹𝗹 𝗮𝗹𝘄𝗮𝘆𝘀 𝗯𝗲 𝗰𝗼𝗻𝘀𝘁𝗮𝗻𝘁 𝗮𝗻𝗱 𝗶𝗺𝗽𝗿𝗼𝘃𝗲𝘀 𝘁𝗵𝗲 𝗼𝘃𝗲𝗿𝗮𝗹𝗹 𝗽𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲 by reducing the time and space/memory requirements.
+
+Tail recursion is a compile level optimisation. Some modern complier can detect tail recursion and perform tail recursion optimisation by converting it to iteration to improve performance
+
+𝗝𝗮𝘃𝗮, 𝗽𝘆𝘁𝗵𝗼𝗻 𝗱𝗼𝗻'𝘁 𝘀𝘂𝗽𝗽𝗼𝗿𝘁 𝘁𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 𝘄𝗵𝗶𝗹𝗲 𝗖 𝗮𝗻𝗱 𝗖++ 𝘀𝘂𝗽𝗽𝗼𝗿𝘁𝘀 𝗶𝘁.
+
+
+
+𝗥𝗲𝗳𝗲𝗿𝗲𝗻𝗰𝗲:
+
+Data Structures through C in Depth by S.K.Srivastava/Deepali Srivastava
+
+
+
+Want to know more about recursion, then refer the Slide Deck prepared by Mayank  where 𝗵𝗲 𝗵𝗮𝘀 𝘂𝘀𝗲𝗱 𝗵𝗶𝘀 𝗰𝗿𝗲𝗮𝘁𝗶𝘃𝗶𝘁𝘆 𝘁𝗼 𝗲𝘅𝗽𝗹𝗮𝗶𝗻 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 𝗶𝗻  𝗰𝗼𝗻𝘃𝗲𝗿𝘀𝗮𝘁𝗶𝗼𝗻 𝘀𝘁𝘆𝗹𝗲 as we normally do in our daily lives.
+
+
+
+𝗙𝗼𝗿 𝗧𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝘃𝗲 𝗽𝗿𝗼𝗴𝗿𝗮𝗺𝘀, 𝗿𝗲𝗳𝗲𝗿 𝘁𝗼 𝘁𝗵𝗲 𝗳𝗼𝗹𝗹𝗼𝘄𝗶𝗻𝗴 𝗹𝗶𝗻𝗸.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+𝗡𝗼𝗻-𝘁𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 𝘁𝗼 𝗧𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻
+
+Slower execution to faster execution
+
+O(n) space to O(1) space
+
+
+
+𝗧𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻
+
+A recursive call is said to be tail recursive if it is the last statement to be executed inside a function and that call is not a part of expression.
+
+eg:
+
+int fact(int num, int res){
+
+if(num == 1){
+
+return res;
+
+}
+
+return fact(num - 1, num * res);  // tail recursive call
+
+}
+
+
+
+In tail recursive function, no pending operations are left after making  a recursive call. So, no need to store the record of the previous state i.e. no need to push a new activation record for each recursive call in the stack.
+
+
+
+𝗡𝗼𝗻-𝘁𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 
+
+int fact(int num) {
+
+if(num == 1) {
+
+return 1;
+
+}
+
+return num * fact(num - 1); // not a tail recursive call
+
+}
+
+
+
+Non-Tail recursive functions have to finish the pending work after the recursive call finishes, so activation record for each recursive call has to be maintained in the stack.
+
+
+
+𝗥𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 𝗶𝘀 𝘀𝗹𝗼𝘄 because of the 𝘁𝗶𝗺𝗲 𝘀𝗽𝗲𝗻𝘁 𝗶𝗻 𝗽𝘂𝘀𝗵𝗶𝗻𝗴 𝗮𝗻𝗱 𝗽𝗼𝗽𝗽𝗶𝗻𝗴 𝘁𝗵𝗲 𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗿𝗲𝗰𝗼𝗿𝗱𝘀 on and from the stack for each recursive call and 𝗲𝘅𝗽𝗲𝗻𝘀𝗶𝘃𝗲 𝗶𝗻 𝘁𝗲𝗿𝗺𝘀 𝗼𝗳 𝗺𝗲𝗺𝗼𝗿𝘆 as well because 𝗶𝘁 𝗿𝗲𝗾𝘂𝗶𝗿𝗲𝘀 𝘀𝗽𝗮𝗰𝗲 𝗶𝗻 𝘁𝗵𝗲 𝘀𝘁𝗮𝗰𝗸 𝘁𝗼 𝘀𝘁𝗼𝗿𝗲 𝘁𝗵𝗲 𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗿𝗲𝗰𝗼𝗿𝗱𝘀 for each recursive call and 𝗶𝗳 𝘁𝗵𝗲 𝘀𝘁𝗮𝗰𝗸 𝗶𝘀 𝘁𝗼𝗼 𝗱𝗲𝗲𝗽, 𝘁𝗵𝗲𝗻 𝘀𝘁𝗮𝗰𝗸 𝗺𝗮𝘆 𝗼𝘃𝗲𝗿𝗳𝗹𝗼𝘄 𝘁𝗼𝗼. 
+
+
+
+This can be improved by making recursive program as tail recursive 𝗮𝘀 𝗶𝘁 𝗱𝗼𝗲𝘀𝗻'𝘁 𝗶𝗻𝘃𝗼𝗹𝘃𝗲𝘀 𝘁𝗵𝗲 𝗽𝘂𝘀𝗵𝗶𝗻𝗴 𝗮𝗻𝗱 𝗽𝗼𝗽𝗽𝗶𝗻𝗴 𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀, 𝗿𝗮𝘁𝗵𝗲𝗿 𝘁𝗵𝗲 𝗽𝗿𝗲𝘃𝗶𝗼𝘂𝘀 𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗿𝗲𝗰𝗼𝗿𝗱 𝗴𝗲𝘁𝘀 𝗼𝘃𝗲𝗿𝘄𝗿𝗶𝘁𝘁𝗲𝗻 𝗯𝘆 𝘁𝗵𝗲 𝗰𝘂𝗿𝗿𝗲𝗻𝘁 𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗿𝗲𝗰𝗼𝗿𝗱 when a recursive call occurs, while retaining the original return address. So, at a time we have only one activation record on the stack and that too for the currently executing recursive call. So, it doesn't matter that how deep the recursion is, 𝘁𝗵𝗲 𝘀𝗽𝗮𝗰𝗲 𝗿𝗲𝗾𝘂𝗶𝗿𝗲𝗺𝗲𝗻𝘁 𝘄𝗶𝗹𝗹 𝗮𝗹𝘄𝗮𝘆𝘀 𝗯𝗲 𝗰𝗼𝗻𝘀𝘁𝗮𝗻𝘁 𝗮𝗻𝗱 𝗶𝗺𝗽𝗿𝗼𝘃𝗲𝘀 𝘁𝗵𝗲 𝗼𝘃𝗲𝗿𝗮𝗹𝗹 𝗽𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲 by reducing the time and space/memory requirements.
+
+
+
+Tail recursion is a compile level optimisation. Some modern compiler can detect tail recursion and perform the optimisation by converting it to iteration to improve performance.
+
+
+
+Java, python don't support tail recursion while C and C++ do.
+
+
+
+𝗥𝗲𝗳𝗲𝗿𝗲𝗻𝗰𝗲:
+
+Data Structures through C in Depth by S.K.Srivastava/Deepali Srivastava
+
+
+
+Want to know more about recursion, then refer the Slide Deck prepared by Mayank  where 𝗵𝗲 𝗵𝗮𝘀 𝘂𝘀𝗲𝗱 𝗵𝗶𝘀 𝗰𝗿𝗲𝗮𝘁𝗶𝘃𝗶𝘁𝘆 𝘁𝗼 𝗲𝘅𝗽𝗹𝗮𝗶𝗻 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 𝗶𝗻 𝘁𝗵𝗲 𝗰𝗼𝗻𝘃𝗲𝗿𝘀𝗮𝘁𝗶𝗼𝗻 𝘀𝘁𝘆𝗹𝗲 as we normally do in our daily lives.
+
+
+
+𝗙𝗼𝗿 𝗧𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝘃𝗲 𝗽𝗿𝗼𝗴𝗿𝗮𝗺𝘀, 𝗿𝗲𝗳𝗲𝗿 𝘁𝗼 𝘁𝗵𝗲 𝗳𝗼𝗹𝗹𝗼𝘄𝗶𝗻𝗴 𝗹𝗶𝗻𝗸.
