@@ -1,6 +1,6 @@
 # Tail-Recursion-Programs
 
-[Programs (Tail-Recursive)](https://github.com/Akshaya-Amar/LeetCodeSolutions#programs)
+[Programs (Tail-Recursive)](https://github.com/Akshaya-Amar/Tail-Recursion-Programs#programs)
 
 𝗡𝗼𝗻-𝘁𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 𝘁𝗼 𝗧𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 will lead from slower execution to faster execution and O(n) space to O(1) space
 
