@@ -1,7 +1,6 @@
 # Tail-Recursion-Programs
 
-Programs
-Will keep updating with more programs.
+[Programs (Tail-Recursive)](https://github.com/Akshaya-Amar/LeetCodeSolutions#programs)
 
 𝗡𝗼𝗻-𝘁𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 𝘁𝗼 𝗧𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 will lead from slower execution to faster execution and O(n) space to O(1) space
 
@@ -65,3 +64,15 @@ This can be improved by making recursive program as tail recursive 𝗮𝘀 𝗶
 
 **Reference:**
 Data Structures through C in Depth by S.K.Srivastava/Deepali Srivastava
+
+## Programs
+| # | Title | Complexity |
+|:---:| ----- | :--------: |
+|1.|[Factorial Of Number](./FactorialOfNumber.c) | Time - **O(n)** <br>Space - **O(1)** |
+|2.|[Number of Digits In a Number](./NumberOfDigitsInANumber.c) | Time - **O(log<sub>2</sub>(n))** <br>Space - **O(1)** |
+|3.|[Number Of Even Elements In Array](./NumberOfEvenElementsInArray.c) | Time - **O(n)** <br>Space - **O(1)** |
+|4.|[Reverse Integer](./ReverseInteger.c) | Time - **O(log<sub>2</sub>(n))** <br>Space - **O(1)** |
+|5.|[Sum Of Digits](./SumOfDigits.c) | Time - **O(log<sub>2</sub>(n))** <br>Space - **O(1)** |
+|6.|[Sum Of Elements In Array](./SumOfElementsInArray.c) | Time - **O(n)** <br>Space - **O(1)** |
+
+**Will keep updating with more programs.**
