@@ -8,7 +8,7 @@
 
 This can be improved by making recursive program as tail recursive 𝗮𝘀 𝗶𝘁 𝗱𝗼𝗲𝘀𝗻'𝘁 𝗶𝗻𝘃𝗼𝗹𝘃𝗲𝘀 𝘁𝗵𝗲 𝗽𝘂𝘀𝗵𝗶𝗻𝗴 𝗮𝗻𝗱 𝗽𝗼𝗽𝗽𝗶𝗻𝗴 𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀, 𝗿𝗮𝘁𝗵𝗲𝗿 𝘁𝗵𝗲 𝗽𝗿𝗲𝘃𝗶𝗼𝘂𝘀 𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗿𝗲𝗰𝗼𝗿𝗱 𝗴𝗲𝘁𝘀 𝗼𝘃𝗲𝗿𝘄𝗿𝗶𝘁𝘁𝗲𝗻 𝗯𝘆 𝘁𝗵𝗲 𝗰𝘂𝗿𝗿𝗲𝗻𝘁 𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗿𝗲𝗰𝗼𝗿𝗱 when a recursive call occurs, while retaining the original return address. So, at a time we have only one activation record on the stack and that too for the currently executing recursive call. So, it doesn't matter that how deep the recursion is, 𝘁𝗵𝗲 𝘀𝗽𝗮𝗰𝗲 𝗿𝗲𝗾𝘂𝗶𝗿𝗲𝗺𝗲𝗻𝘁 𝘄𝗶𝗹𝗹 𝗮𝗹𝘄𝗮𝘆𝘀 𝗯𝗲 𝗰𝗼𝗻𝘀𝘁𝗮𝗻𝘁 𝗮𝗻𝗱 𝗶𝗺𝗽𝗿𝗼𝘃𝗲𝘀 𝘁𝗵𝗲 𝗼𝘃𝗲𝗿𝗮𝗹𝗹 𝗽𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲 by reducing the time and space/memory requirements.
 
-𝗡𝗼𝗻-𝘁𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻
+𝗡𝗼𝗻-𝘁𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻<br>
 A recursive call is said to be non-tail recursive if it is not the last statement to be executed inside a function or that call is a part of expression.<br>
 eg:
 ```
