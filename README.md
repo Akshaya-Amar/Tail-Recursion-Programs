@@ -2,15 +2,18 @@
 
 [Programs (Tail-Recursive)](https://github.com/Akshaya-Amar/Tail-Recursion-Programs#programs)
 
-𝗡𝗼𝗻-𝘁𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 𝘁𝗼 𝗧𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 will lead from slower execution **to faster execution and** from O(n) space **to O(1) space**
+**Non-tail recursion to Tail recursion** will lead from slower execution **to faster execution and** from O(n) space **to O(1) space**
 
-𝗥𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻 𝗶𝘀 𝘀𝗹𝗼𝘄 because of the 𝘁𝗶𝗺𝗲 𝘀𝗽𝗲𝗻𝘁 𝗶𝗻 𝗽𝘂𝘀𝗵𝗶𝗻𝗴 𝗮𝗻𝗱 𝗽𝗼𝗽𝗽𝗶𝗻𝗴 𝘁𝗵𝗲 𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗿𝗲𝗰𝗼𝗿𝗱𝘀 on and from the stack for each recursive call and 𝗲𝘅𝗽𝗲𝗻𝘀𝗶𝘃𝗲 𝗶𝗻 𝘁𝗲𝗿𝗺𝘀 𝗼𝗳 𝗺𝗲𝗺𝗼𝗿𝘆 as well because 𝗶𝘁 𝗿𝗲𝗾𝘂𝗶𝗿𝗲𝘀 𝘀𝗽𝗮𝗰𝗲 𝗶𝗻 𝘁𝗵𝗲 𝘀𝘁𝗮𝗰𝗸 𝘁𝗼 𝘀𝘁𝗼𝗿𝗲 𝘁𝗵𝗲 𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗿𝗲𝗰𝗼𝗿𝗱𝘀 for each recursive call and 𝗶𝗳 𝘁𝗵𝗲 𝘀𝘁𝗮𝗰𝗸 𝗶𝘀 𝘁𝗼𝗼 𝗱𝗲𝗲𝗽, 𝘁𝗵𝗲𝗻 𝘀𝘁𝗮𝗰𝗸 𝗺𝗮𝘆 𝗼𝘃𝗲𝗿𝗳𝗹𝗼𝘄 𝘁𝗼𝗼.
+**Recursion is slow** because of the **time spend in pushing and popping the activation records** on and from the stack for each recursive call and **expensive in terms of memory** as well because **it requires space in the stack to store the activation records** for each recursive call and **if the stack is too deep, then stack may overflow.**
 
-This can be improved by making recursive program as tail recursive 𝗮𝘀 𝗶𝘁 𝗱𝗼𝗲𝘀𝗻'𝘁 𝗶𝗻𝘃𝗼𝗹𝘃𝗲𝘀 𝘁𝗵𝗲 𝗽𝘂𝘀𝗵𝗶𝗻𝗴 𝗮𝗻𝗱 𝗽𝗼𝗽𝗽𝗶𝗻𝗴 𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀, 𝗿𝗮𝘁𝗵𝗲𝗿 𝘁𝗵𝗲 𝗽𝗿𝗲𝘃𝗶𝗼𝘂𝘀 𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗿𝗲𝗰𝗼𝗿𝗱 𝗴𝗲𝘁𝘀 𝗼𝘃𝗲𝗿𝘄𝗿𝗶𝘁𝘁𝗲𝗻 𝗯𝘆 𝘁𝗵𝗲 𝗰𝘂𝗿𝗿𝗲𝗻𝘁 𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗶𝗼𝗻 𝗿𝗲𝗰𝗼𝗿𝗱 when a recursive call occurs, while retaining the original return address. So, at a time we have only one activation record on the stack and that too for the currently executing recursive call. So, it doesn't matter that how deep the recursion is, 𝘁𝗵𝗲 𝘀𝗽𝗮𝗰𝗲 𝗿𝗲𝗾𝘂𝗶𝗿𝗲𝗺𝗲𝗻𝘁 𝘄𝗶𝗹𝗹 𝗮𝗹𝘄𝗮𝘆𝘀 𝗯𝗲 𝗰𝗼𝗻𝘀𝘁𝗮𝗻𝘁 𝗮𝗻𝗱 𝗶𝗺𝗽𝗿𝗼𝘃𝗲𝘀 𝘁𝗵𝗲 𝗼𝘃𝗲𝗿𝗮𝗹𝗹 𝗽𝗲𝗿𝗳𝗼𝗿𝗺𝗮𝗻𝗰𝗲 by reducing the time and space/memory requirements.
+This can be improved by making recursive program as **tail recursive** as **it doesn't involves pushing and popping operations**, rather the previous activation record gets overwrittern by the current activation record when a recursive call occurs, while retaining the original return address. So, at a time we have only one activation record on the stack and that too for the currently executing recursive call. So, it doesn't matter that how deep the recursion is, **the space requirement will always be constant** and **improves the overall performance by reducing the time and space/memory requirements.**
 
-𝗡𝗼𝗻-𝘁𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻<br>
-A recursive call is said to be non-tail recursive if it is not the last statement to be executed inside a function or that call is a part of expression.<br>
+<h1>Non-tail recursion</h1>
+A recursive call is said to be non-tail recursive if it is not the last statement to be executed inside a function or that call is a part of expression.
+
+<br>
 eg:
+
 ```
 int fact(int num) {
 if(num == 1) {
@@ -35,7 +38,7 @@ To find factorial of 5 using non-tail recursion<br>
 Non-Tail recursive functions have to finish the pending work after the recursive call finishes, so activation record for each recursive call has to be maintained in the stack. Here, after the recursive call, we still need to remember to multiply later on, in order to get the desired results, and to remember, space is required in order to store the activation record in the stack for each recursive call which will degrade performance and will not be space efficient.
 
 
-𝗧𝗮𝗶𝗹 𝗿𝗲𝗰𝘂𝗿𝘀𝗶𝗼𝗻<br>
+<h1>Tail recursion</h1>
 A recursive call is said to be tail recursive if it is the last statement to be executed inside a function and that call is not a part of expression.<br>
 eg:
 
