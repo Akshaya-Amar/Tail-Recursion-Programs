@@ -105,10 +105,10 @@ https://softwareengineering.stackexchange.com/questions/272061/why-doesnt-java-h
 | # | Title | Complexity |
 |:---:| ----- | :--------: |
 |1.|[Factorial Of Number](./FactorialOfNumber.c) | Time - **O(n)** <br>Space - **O(1)** |
-|2.|[Number of Digits In a Number](./NumberOfDigitsInANumber.c) | Time - **O(log<sub>2</sub>(n))** <br>Space - **O(1)** |
+|2.|[Number of Digits In a Number](./NumberOfDigitsInANumber.c) | Time - **O(log<sub>10</sub>(n))** <br>Space - **O(1)** |
 |3.|[Number Of Even Elements In Array](./NumberOfEvenElementsInArray.c) | Time - **O(n)** <br>Space - **O(1)** |
-|4.|[Reverse Integer](./ReverseInteger.c) | Time - **O(log<sub>2</sub>(n))** <br>Space - **O(1)** |
-|5.|[Sum Of Digits](./SumOfDigits.c) | Time - **O(log<sub>2</sub>(n))** <br>Space - **O(1)** |
+|4.|[Reverse Integer](./ReverseInteger.c) | Time - **O(log<sub>10</sub>(n))** <br>Space - **O(1)** |
+|5.|[Sum Of Digits](./SumOfDigits.c) | Time - **O(log<sub>10</sub>(n))** <br>Space - **O(1)** |
 |6.|[Sum Of Elements In Array](./SumOfElementsInArray.c) | Time - **O(n)** <br>Space - **O(1)** |
 
 **Will keep updating with more programs.**
