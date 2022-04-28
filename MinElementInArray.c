@@ -18,6 +18,10 @@ int main(){
   return 0;
 }
 
+/*
+Time: O(n)
+Space: O(n)
+*/
 int getMinVal(int arr[], int size) {
 
   if(size == 0) {
@@ -32,6 +36,10 @@ int getMinVal(int arr[], int size) {
   return min;
 }
 
+/*
+Time: O(n)
+Space: O(1)
+*/
 int getMinValUsingTailRecursion(int arr[], int size, int min) {
 
   if(size == 1) {

@@ -113,5 +113,13 @@ https://softwareengineering.stackexchange.com/questions/272061/why-doesnt-java-h
 |4.|[Reverse Integer](./ReverseInteger.c) | Time - **O(log<sub>10</sub>(n))** <br>Space - **O(1)** |
 |5.|[Sum Of Digits](./SumOfDigits.c) | Time - **O(log<sub>10</sub>(n))** <br>Space - **O(1)** |
 |6.|[Sum Of Elements In Array](./SumOfElementsInArray.c) | Time - **O(n)** <br>Space - **O(1)** |
+|7.|[Binary Search](./BinarySearch.c) | Time - **O(log<sub>2</sub>(n))** <br>Space - **O(1)** |
+|8.|[Pow(x, n)](./FindPower.c) | Time - **O(log<sub>2</sub>(n))** <br>Space - **O(1)** |
+|9.|[Minimum Element In Array](./MinElementInArray.c) | Time - **O(n)** <br>Space - **O(1)** |
+|10.|[Perfect Number](./PerfectNumber.c) | Time - **O(n)** <br>Space - **O(1)** |
+|11.|[Sum Of Elements In Array](./SumOfElementsInArray.c) | Time - **O(n)** <br>Space - **O(1)** |
+|12.|[Number Of Times Digits Encountered](./NumberOfTimesDigitsEncountered.c) | Time - **O(log<sub>10</sub>(n))** <br>Space - **O(1)** |
+|13.|[Palindrome Number](./PalindromeNumber.c) | Time - **O(log<sub>10</sub>(n))** <br>Space - **O(1)** |
+|15.|[Sum Of Proper Divisor](./SumOfProperDivisor.c) | Time - **O(n)** <br>Space - **O(1)** |
 
-**Will keep updating with more programs.**
+**Will keep adding more programs.**
