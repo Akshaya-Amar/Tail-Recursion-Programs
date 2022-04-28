@@ -120,6 +120,7 @@ https://softwareengineering.stackexchange.com/questions/272061/why-doesnt-java-h
 |11.|[Sum Of Elements In Array](./SumOfElementsInArray.c) | Time - **O(n)** <br>Space - **O(1)** |
 |12.|[Number Of Times Digits Encountered](./NumberOfTimesDigitsEncountered.c) | Time - **O(log<sub>10</sub>(n))** <br>Space - **O(1)** |
 |13.|[Palindrome Number](./PalindromeNumber.c) | Time - **O(log<sub>10</sub>(n))** <br>Space - **O(1)** |
-|15.|[Sum Of Proper Divisor](./SumOfProperDivisor.c) | Time - **O(n)** <br>Space - **O(1)** |
+|14.|[Sum Of Proper Divisor](./SumOfProperDivisor.c) | Time - **O(n)** <br>Space - **O(1)** |
+|15.|[Greatest Common Divisor(GCD)](./GCD.c) | Time - **O(log<sub>10</sub>(min(m, n)))** <br>Space - **O(1)** |
 
 **Will keep adding more programs.**
